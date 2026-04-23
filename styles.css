@@ -1,0 +1,461 @@
+﻿:root {
+  --bg: #f6f9ff;
+  --surface: #ffffff;
+  --surface-soft: #ecf4ff;
+  --border: #d5e5ff;
+  --ink: #0d2038;
+  --ink-soft: #39547a;
+  --brand: #0f5db8;
+  --brand-2: #2f83df;
+  --brand-3: #88c3ff;
+  --ok: #1d6f42;
+  --shadow: 0 18px 45px rgba(19, 71, 140, 0.12);
+  --radius-lg: 20px;
+  --radius-md: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Source Serif 4", Georgia, serif;
+  background: radial-gradient(circle at 8% 0%, #e7f2ff 0%, var(--bg) 38%), var(--bg);
+  color: var(--ink);
+  line-height: 1.62;
+  min-height: 100vh;
+}
+
+.bg-shape {
+  position: fixed;
+  border-radius: 999px;
+  filter: blur(30px);
+  opacity: 0.45;
+  z-index: -2;
+}
+
+.bg-shape-a {
+  width: 320px;
+  height: 320px;
+  right: -120px;
+  top: -90px;
+  background: #63b3ff;
+}
+
+.bg-shape-b {
+  width: 280px;
+  height: 280px;
+  left: -100px;
+  top: 45%;
+  background: #9ad9ff;
+}
+
+.hero {
+  width: min(1200px, 94vw);
+  margin: 24px auto 12px;
+  background: linear-gradient(130deg, #0f3f77 0%, #0f5db8 38%, #2d7fd5 100%);
+  color: #f7fbff;
+  border-radius: var(--radius-lg);
+  padding: 22px 24px 20px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  right: -80px;
+  top: -60px;
+  width: 260px;
+  height: 260px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent 70%);
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: center;
+}
+
+.logo {
+  display: block;
+  background: #fff;
+  border-radius: 12px;
+  padding: 6px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.logo-rutgers {
+  width: 176px;
+  max-width: 44vw;
+}
+
+.logo-pfizer {
+  width: 134px;
+  max-width: 35vw;
+}
+
+.hero-copy {
+  margin-top: 14px;
+}
+
+.eyebrow,
+.meta,
+.subtitle,
+.metric-label,
+.site-footer,
+.report-header p {
+  font-family: "Sora", "Trebuchet MS", sans-serif;
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: 0.72rem;
+  opacity: 0.84;
+}
+
+.hero h1 {
+  margin: 4px 0 4px;
+  font-family: "Sora", "Trebuchet MS", sans-serif;
+  font-size: clamp(1.4rem, 2.8vw, 2.3rem);
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin: 0;
+  max-width: 76ch;
+  font-size: 0.95rem;
+  opacity: 0.95;
+}
+
+.meta {
+  margin: 8px 0 0;
+  font-size: 0.82rem;
+  opacity: 0.85;
+}
+
+.metric-grid {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(120px, 1fr));
+  gap: 9px;
+}
+
+.metric-card {
+  background: rgba(255, 255, 255, 0.17);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 9px 10px;
+  backdrop-filter: blur(3px);
+}
+
+.metric-label {
+  margin: 0;
+  font-size: 0.67rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  opacity: 0.87;
+}
+
+.metric-value {
+  margin: 5px 0 0;
+  font-family: "Sora", "Trebuchet MS", sans-serif;
+  font-weight: 700;
+  font-size: 1.03rem;
+}
+
+.hero-actions {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn {
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 9px 14px;
+  font-family: "Sora", "Trebuchet MS", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 140ms ease, box-shadow 140ms ease, background-color 140ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: #ffffff;
+  color: #0f4c94;
+  box-shadow: 0 5px 14px rgba(8, 31, 64, 0.18);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.13);
+  color: #f7fbff;
+  border-color: rgba(255, 255, 255, 0.48);
+}
+
+.layout {
+  width: min(1200px, 94vw);
+  margin: 12px auto 28px;
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+}
+
+.toc-shell,
+.report-shell {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 35px rgba(19, 71, 140, 0.08);
+}
+
+.toc-shell {
+  position: sticky;
+  top: 14px;
+  padding: 14px 14px 16px;
+  max-height: calc(100vh - 22px);
+  overflow: auto;
+}
+
+.toc-shell h2,
+.report-header h2 {
+  margin: 0;
+  font-family: "Sora", "Trebuchet MS", sans-serif;
+  font-size: 1.02rem;
+  color: #0f4f9a;
+}
+
+.toc {
+  margin-top: 10px;
+  display: grid;
+  gap: 4px;
+}
+
+.toc-link {
+  display: block;
+  color: #2f5078;
+  text-decoration: none;
+  border-radius: 9px;
+  padding: 7px 8px;
+  font-size: 0.88rem;
+  line-height: 1.35;
+  border: 1px solid transparent;
+}
+
+.toc-link.level-h3 {
+  margin-left: 10px;
+  font-size: 0.83rem;
+  color: #45658e;
+}
+
+.toc-link:hover,
+.toc-link.active {
+  border-color: #b5d4fc;
+  background: var(--surface-soft);
+  color: #0f4f9a;
+}
+
+.report-shell {
+  padding: 16px 18px 18px;
+}
+
+.report-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 10px;
+}
+
+.report-header p {
+  margin: 5px 0 0;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+}
+
+.report {
+  overflow-wrap: anywhere;
+  font-size: 1rem;
+}
+
+.loading {
+  color: var(--ink-soft);
+}
+
+.report h1,
+.report h2,
+.report h3,
+.report h4 {
+  font-family: "Sora", "Trebuchet MS", sans-serif;
+  color: #0f4f9a;
+  scroll-margin-top: 18px;
+}
+
+.report h1 {
+  font-size: 1.6rem;
+  margin: 12px 0 10px;
+  color: #0d3d73;
+}
+
+.report h2 {
+  font-size: 1.2rem;
+  margin: 25px 0 8px;
+  padding-top: 6px;
+  border-top: 1px dashed #cce1ff;
+}
+
+.report h3 {
+  font-size: 1rem;
+  margin: 16px 0 4px;
+}
+
+.report p,
+.report li {
+  color: #143153;
+}
+
+.report a {
+  color: #0f61be;
+}
+
+.report hr {
+  border: 0;
+  border-top: 1px solid #cce1ff;
+  margin: 18px 0;
+}
+
+.report code {
+  background: #eaf3ff;
+  border: 1px solid #c9dcfb;
+  border-radius: 7px;
+  padding: 1px 6px;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.92em;
+}
+
+.report table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0 15px;
+  font-size: 0.92rem;
+}
+
+.report th,
+.report td {
+  border: 1px solid #c9ddfb;
+  padding: 8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.report th {
+  background: #ecf4ff;
+  font-family: "Sora", "Trebuchet MS", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.report tr:nth-child(even) td {
+  background: #f8fbff;
+}
+
+.report blockquote {
+  margin: 10px 0;
+  border-left: 4px solid #8abffd;
+  background: #f1f7ff;
+  padding: 8px 10px;
+}
+
+.site-footer {
+  width: min(1200px, 94vw);
+  margin: 0 auto 28px;
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
+  .metric-grid {
+    grid-template-columns: repeat(3, minmax(120px, 1fr));
+  }
+
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .toc-shell {
+    position: static;
+    max-height: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding: 16px;
+    margin-top: 10px;
+  }
+
+  .hero h1 {
+    font-size: 1.4rem;
+  }
+
+  .metric-grid {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .report-shell {
+    padding: 12px;
+  }
+
+  .report table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media print {
+  .hero-actions,
+  .toc-shell,
+  .site-footer {
+    display: none !important;
+  }
+
+  .layout {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+
+  .report-shell {
+    border: none;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  body {
+    background: #fff;
+  }
+}
