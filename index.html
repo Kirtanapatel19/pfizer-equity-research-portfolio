@@ -1,0 +1,88 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pfizer Equity Research Portfolio | Kirtana Patel</title>
+  <meta name="description" content="Pfizer (NYSE: PFE) Equity Research Report by Kirtana Patel. Portfolio-style public website with valuation, field research, appendix statements, and references." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="bg-shape bg-shape-a" aria-hidden="true"></div>
+  <div class="bg-shape bg-shape-b" aria-hidden="true"></div>
+
+  <header class="hero">
+    <div class="hero-top">
+      <img src="rbs.jpg" alt="Rutgers Business School" class="logo logo-rutgers" />
+      <img src="pfizer-logo.png" alt="Pfizer" class="logo logo-pfizer" />
+    </div>
+
+    <div class="hero-copy">
+      <p class="eyebrow">Equity Research Portfolio Website</p>
+      <h1>Pfizer Inc. (NYSE: PFE)</h1>
+      <p class="subtitle">Final draft built in J&amp;J report structure with full valuation, field research Q&amp;A, appendix statements, and references.</p>
+      <p class="meta">Analyst: Kirtana Patel | Report Date: April 21, 2026 | Coverage: Initiation (Long)</p>
+    </div>
+
+    <div class="metric-grid">
+      <article class="metric-card">
+        <p class="metric-label">Rating</p>
+        <p class="metric-value">BUY</p>
+      </article>
+      <article class="metric-card">
+        <p class="metric-label">12M Price Target</p>
+        <p class="metric-value">$34.00</p>
+      </article>
+      <article class="metric-card">
+        <p class="metric-label">Current Price</p>
+        <p class="metric-value">$27.40</p>
+      </article>
+      <article class="metric-card">
+        <p class="metric-label">Implied Upside</p>
+        <p class="metric-value">24.1%</p>
+      </article>
+      <article class="metric-card">
+        <p class="metric-label">Dividend Yield</p>
+        <p class="metric-value">6.3%</p>
+      </article>
+      <article class="metric-card">
+        <p class="metric-label">Implied Total Return</p>
+        <p class="metric-value">~30%</p>
+      </article>
+    </div>
+
+    <div class="hero-actions">
+      <a href="#report" class="btn btn-primary">Read Full Report</a>
+      <button id="btnPrint" class="btn btn-secondary" type="button">Export PDF</button>
+      <button id="btnDownload" class="btn btn-secondary" type="button">Download Markdown</button>
+      <button id="btnCopyLink" class="btn btn-secondary" type="button">Copy Share Link</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="toc-shell" aria-label="Report table of contents">
+      <h2>Contents</h2>
+      <nav id="toc" class="toc"></nav>
+    </aside>
+
+    <section class="report-shell">
+      <div class="report-header">
+        <h2>Full Report</h2>
+        <p>Complete final draft rendered from <code>report.md</code> for GitHub Pages sharing.</p>
+      </div>
+      <article id="report" class="report" aria-live="polite">
+        <p class="loading">Loading report content...</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Educational equity research project. Not investment advice.</p>
+  </footer>
+</body>
+</html>
